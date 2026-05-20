@@ -1,0 +1,29 @@
+// SwiftUI example call for OctoCare backend
+// Replace the URL with your deployed backend URL later.
+
+import Foundation
+
+struct OctoCareResponse: Codable {
+    let reply: String
+}
+
+func sendOctoCareMessage(_ message: String) async -> String {
+    guard let url = URL(string: "http://localhost:3000/api/octocare-chat") else {
+        return "Invalid backend URL."
+    }
+
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+    let body = ["message": message]
+    request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+
+    do {
+        let (data, _) = try await URLSession.shared.data(for: request)
+        let decoded = try JSONDecoder().decode(OctoCareResponse.self, from: data)
+        return decoded.reply
+    } catch {
+        return "OctoCare is having trouble right now. Please try again later."
+    }
+}
