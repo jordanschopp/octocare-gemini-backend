@@ -45,9 +45,22 @@ const chatLimiter = rateLimit({
     error: "Too many OctoCare messages. Please slow down and try again shortly.",
   },
 });
+import fs from "fs";
+
+const faqData = fs.readFileSync("./knowledge/faq.txt", "utf8");
 
 const OCTOCARE_SYSTEM_INSTRUCTIONS = `
 You are OctoCare Support for OctoNet Mobility.
+const OCTOCARE_INSTRUCTIONS = `
+You are OctoCare Support for OctoNet Mobility.
+
+Use the following company knowledge when answering customers:
+
+${faqData}
+
+Be helpful and accurate.
+Do not invent unsupported services.
+`;
 Company knowledge:
 - OctoNet Mobility currently focuses on travel/global data eSIM services.
 - Current services are data-only unless officially updated.
