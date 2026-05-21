@@ -1,0 +1,25 @@
+USA Travel eSIM Plan Sheet
+Recommended launch product for Canadian travellers going to the United States. Final pricing must be validated with a real eSIM partner before public sale.
+
+Plan	Data	Valid	Price	Best For
+Travel Mini	1GB	7 days	$5 CAD	Emergency maps, messaging, light use
+Travel Starter	3GB	15 days	$9 CAD	Weekend trips and basic browsing
+Travel Basic	5GB	30 days	$13 CAD	Light vacation use
+Travel Plus	10GB	30 days	$22 CAD	Main advertised plan
+Travel Max	20GB	30 days	$35 CAD	Heavy users, hotspot, social media
+Travel Ultra	50GB	30 days	$65 CAD	Long trips and high-data travellers
+
+Regional Pricing Concepts
+After USA demand is proven, OctoNet can test Europe, Mexico & Caribbean, Canada Visitor, and Global eSIM options.
+
+Europe Plan	Data	Valid	Price	Best For
+Europe Mini	1GB	7 days	$6 CAD	Maps, messages, light use
+Europe Starter	3GB	15 days	$12 CAD	Short city break
+Europe Basic	5GB	30 days	$18 CAD	Light vacation use
+Europe Plus	10GB	30 days	$30 CAD	Most 1–2 week trips
+Europe Max	20GB	30 days	$48 CAD	Heavy use or hotspot
+Europe Ultra	50GB	30 days	$85 CAD	Longer multi-country trips
+Region	1GB	3GB	5GB	10GB	20GB
+Mexico & Caribbean	$7 CAD	$14 CAD	$22 CAD	$38 CAD	$65 CAD
+Canada Visitor	$6 CAD	$11 CAD	$17 CAD	$28 CAD	$48 CAD
+Global	$8 CAD	$18 CAD	$28 CAD	$45 CAD	$75 CAD
