@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
+import fs from "fs";
 import { GoogleGenAI } from "@google/genai";
 
 dotenv.config();
@@ -10,6 +11,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+
 const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || "")
   .split(",")
   .map((origin) => origin.trim())
@@ -19,6 +21,10 @@ if (!GEMINI_API_KEY) {
   console.error("Missing GEMINI_API_KEY. Add it to your .env file.");
   process.exit(1);
 }
+
+const pricingData = fs.readFileSync("./knowledge/pricing.txt", "utf8");
+const travelPlansData = fs.readFileSync("./knowledge/travel-plans.txt", "utf8");
+const faqData = fs.readFileSync("./knowledge/faq.txt", "utf8");
 
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
@@ -45,14 +51,11 @@ const chatLimiter = rateLimit({
     error: "Too many OctoCare messages. Please slow down and try again shortly.",
   },
 });
-import fs from "fs";
-
-const faqData = fs.readFileSync("./knowledge/faq.txt", "utf8");
 
 const OCTOCARE_SYSTEM_INSTRUCTIONS = `
 You are OctoCare Support for OctoNet Mobility.
 
-Use the following company knowledge when answering customers:
+Use the following official OctoNet company knowledge when answering customers.
 
 Pricing:
 ${pricingData}
@@ -106,7 +109,11 @@ app.get("/", (_req, res) => {
 });
 
 app.get("/health", (_req, res) => {
-  res.json({ ok: true, service: "OctoCare", timestamp: new Date().toISOString() });
+  res.json({
+    ok: true,
+    service: "OctoCare",
+    timestamp: new Date().toISOString(),
+  });
 });
 
 app.post("/api/octocare-chat", chatLimiter, async (req, res) => {
@@ -134,7 +141,8 @@ app.post("/api/octocare-chat", chatLimiter, async (req, res) => {
       ],
     });
 
-    const reply = response.text ||
+    const reply =
+      response.text ||
       "OctoCare had trouble generating a reply. Please contact hello.octonetmobility@gmail.com.";
 
     res.json({ reply });
