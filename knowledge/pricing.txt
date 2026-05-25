@@ -1,25 +1,41 @@
-USA Travel eSIM Plan Sheet
-Recommended launch product for Canadian travellers going to the United States. Final pricing must be validated with a real eSIM partner before public sale.
+OctoNet Mobility Current Travel eSIM Pricing
 
-Plan	Data	Valid	Price	Best For
-Travel Mini	1GB	7 days	$5 CAD	Emergency maps, messaging, light use
-Travel Starter	3GB	15 days	$9 CAD	Weekend trips and basic browsing
-Travel Basic	5GB	30 days	$13 CAD	Light vacation use
-Travel Plus	10GB	30 days	$22 CAD	Main advertised plan
-Travel Max	20GB	30 days	$35 CAD	Heavy users, hotspot, social media
-Travel Ultra	50GB	30 days	$65 CAD	Long trips and high-data travellers
+USA Travel eSIM
+- Travel Starter — 3GB / 15 Days — $12 CAD
+- Travel Basic — 5GB / 30 Days — $18 CAD
+- Travel Plus — 10GB / 30 Days — $28 CAD
+- Travel Max — 20GB / 30 Days — $45 CAD
+- Travel Ultra — 50GB / 30 Days — $78 CAD
 
-Regional Pricing Concepts
-After USA demand is proven, OctoNet can test Europe, Mexico & Caribbean, Canada Visitor, and Global eSIM options.
+Europe Travel eSIM
+- Europe Starter — 3GB / 15 Days — $16 CAD
+- Europe Basic — 5GB / 30 Days — $25 CAD
+- Europe Plus — 10GB / 30 Days — $38 CAD
+- Europe Max — 20GB / 30 Days — $62 CAD
+- Europe Ultra — 50GB / 30 Days — $99 CAD
 
-Europe Plan	Data	Valid	Price	Best For
-Europe Mini	1GB	7 days	$6 CAD	Maps, messages, light use
-Europe Starter	3GB	15 days	$12 CAD	Short city break
-Europe Basic	5GB	30 days	$18 CAD	Light vacation use
-Europe Plus	10GB	30 days	$30 CAD	Most 1–2 week trips
-Europe Max	20GB	30 days	$48 CAD	Heavy use or hotspot
-Europe Ultra	50GB	30 days	$85 CAD	Longer multi-country trips
-Region	1GB	3GB	5GB	10GB	20GB
-Mexico & Caribbean	$7 CAD	$14 CAD	$22 CAD	$38 CAD	$65 CAD
-Canada Visitor	$6 CAD	$11 CAD	$17 CAD	$28 CAD	$48 CAD
-Global	$8 CAD	$18 CAD	$28 CAD	$45 CAD	$75 CAD
+Mexico & Caribbean
+- Trip Starter — 3GB / 15 Days — $19 CAD
+- Vacation — 5GB / 30 Days — $30 CAD
+- Vacation Plus — 10GB / 30 Days — $48 CAD
+- Vacation Max — 20GB / 30 Days — $78 CAD
+
+Canada Visitor
+- Visitor Starter — 3GB / 15 Days — $15 CAD
+- Visitor Basic — 5GB / 30 Days — $24 CAD
+- Visitor Plus — 10GB / 30 Days — $38 CAD
+- Visitor Max — 20GB / 30 Days — $62 CAD
+
+Global / World Pass
+- World Starter — 3GB / 15 Days — $25 CAD
+- World Basic — 5GB / 30 Days — $38 CAD
+- World Plus — 10GB / 30 Days — $58 CAD
+- World Max — 20GB / 30 Days — $92 CAD
+
+Important Information
+- OctoNet Mobility plans are prepaid travel eSIM data plans.
+- Plans are data-only.
+- No phone number, calling, texting, port-ins, or emergency calling.
+- Includes setup help and OctoCare support.
+- Pricing, taxes, hotspot support, coverage, and availability may change before official launch.
+- Never mention old 1GB Mini plans or deprecated pricing.
