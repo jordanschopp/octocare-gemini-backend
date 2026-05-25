@@ -52,6 +52,35 @@ const chatLimiter = rateLimit({
   },
 });
 
+const projectArc = {
+  codename: "PROJECT ARC",
+  title: "The evolution of OctoNet Mobility",
+  phase: "Version 1 Beta Build",
+  status: "In Development",
+  mission:
+    "Building a customer-first telecom experience with travel eSIM, OctoCare, NETPAY Preview, smart support tools, and a modern app + web ecosystem.",
+  currentFocus: [
+    "Travel eSIM plan previews",
+    "OctoCare AI support",
+    "Device compatibility tools",
+    "Roaming savings calculator",
+    "Plan recommendation engine",
+    "NETPAY Preview",
+    "Account dashboard",
+    "Website and app feature sync"
+  ],
+  nextMilestones: [
+    "Beta stability testing",
+    "Website feature polish",
+    "App Store readiness review",
+    "Partner readiness",
+    "Customer waitlist growth",
+    "Version 1 launch preparation"
+  ],
+  disclaimer:
+    "PROJECT ARC is an internal roadmap codename. Features, pricing, coverage, availability, NETPAY, and OctoNet services may change before public launch."
+};
+
 const OCTOCARE_SYSTEM_INSTRUCTIONS = `
 You are OctoCare Support for OctoNet Mobility.
 
@@ -77,6 +106,8 @@ Important business rules:
 - Do not promise phone numbers, calling, texting, port-ins, or full carrier replacement.
 - Do not claim OctoNet is already a registered carrier unless official confirmation is provided.
 - Do not create legal, billing, refund, or warranty promises.
+- NETPAY is a future preview concept only. Do not describe it as a bank, wallet, credit card, loan, money-transfer service, or active payment service.
+- PROJECT ARC is an internal roadmap codename. Do not present it as a public paid product.
 - Customers needing human support should contact hello.octonetmobility@gmail.com.
 
 Help customers with:
@@ -86,6 +117,7 @@ Help customers with:
 - Waitlist questions
 - Plan information from the provided knowledge files
 - Basic troubleshooting
+- OctoNet app and website feature guidance
 
 Escalate when needed:
 - For billing, refunds, account-specific problems, legal questions, emergencies, or angry customers, tell them to contact OctoNet Mobility support directly at hello.octonetmobility@gmail.com.
@@ -104,7 +136,12 @@ app.get("/", (_req, res) => {
   res.json({
     name: "OctoCare Gemini Backend",
     status: "running",
-    routes: ["GET /health", "POST /api/octocare-chat"],
+    routes: [
+      "GET /health",
+      "POST /api/octocare-chat",
+      "GET /api/project-arc/status",
+      "GET /api/project-arc/roadmap"
+    ],
   });
 });
 
@@ -112,7 +149,27 @@ app.get("/health", (_req, res) => {
   res.json({
     ok: true,
     service: "OctoCare",
+    project: "PROJECT ARC",
     timestamp: new Date().toISOString(),
+  });
+});
+
+app.get("/api/project-arc/status", (_req, res) => {
+  res.json({
+    success: true,
+    project: projectArc.codename,
+    title: projectArc.title,
+    phase: projectArc.phase,
+    status: projectArc.status,
+    timestamp: new Date().toISOString()
+  });
+});
+
+app.get("/api/project-arc/roadmap", (_req, res) => {
+  res.json({
+    success: true,
+    data: projectArc,
+    timestamp: new Date().toISOString()
   });
 });
 
@@ -157,4 +214,5 @@ app.post("/api/octocare-chat", chatLimiter, async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`OctoCare backend running on http://localhost:${PORT}`);
+  console.log(`PROJECT ARC routes active on /api/project-arc/status and /api/project-arc/roadmap`);
 });
